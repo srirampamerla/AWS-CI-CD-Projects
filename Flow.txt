@@ -57,6 +57,10 @@ ECR_REPOSITORY_NAME: name of ecr we created    ""docker run -d -p 8080:8080 --ip
 If any changes happen in we will see in the runner.
 once updated go to the update and click on rerun all the jobs
 
+go to ec2 instance created open the link - by default we will get error.
+
+go to setup and edit in the custom TCP add the port number and same port  number in the app.py file. while giving the url along with the port number we will get the application up and running.
+
 
 
 
