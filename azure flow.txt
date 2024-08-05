@@ -1,0 +1,17 @@
+WEB app-> Docker Image(private Image)
+Docker Image -> Container Registry(AZure) pulled an install in the azure web app.
+
+  Go to azure-> Container registry. add subscription and resource group and registry name and complete he creation.
+open once deployed. . Go to access key and keep it admin user as enabled and copy the login server(for future usecopy he password.)
+create web app. add resource app and name and select docker container in publish and os as Linux and region as Central US. Clikc on nExt Docker
+  select single container and image will be Azure container registry. Select cretae registry.
+  currently not available any docker image in the azure.
+
+  we need to run following cmds(we need to create the docker container)
+docker build -t testdockerkrish.azurecr.io/mltest:latest .
+
+docker login testdockerkrish.azurecr.io  # it will ask usernmae and password (testdockerkrish and copied [pwd from azure)
+
+docker push testdockerkrish.azurecr.io/(nmae of the image like studentperformance-application name):latest
+                                                                                        
+  
