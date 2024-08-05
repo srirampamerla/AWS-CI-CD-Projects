@@ -50,8 +50,8 @@ Actions-> click on create.
 AWS_ACCESS_KEY_ID  :OPEN THE iam access file add the value in this.
 AWS_SECRET_ACCESS_KEY:
 AWS_REGION : WHICH INSTANCE U ARE RUNING LIKE US-EAST-1
-AWS_ECR_LOGIN_URi : WHICH WE COPID IN ECR
-ECR_REPOSITORY_NAME: mLTEST WHICH IN YAML FILE    ""docker run -d -p 8080:8080 --ipc="host" --name=mltest -e 'AWS_ACCESS_KEY_ID=${iN LAST LINE""
+AWS_ECR_LOGIN_URi : WHICH WE COPID IN ECR upto name of ecr
+ECR_REPOSITORY_NAME: name of ecr we created    ""docker run -d -p 8080:8080 --ipc="host" --name=mltest -e 'AWS_ACCESS_KEY_ID=${iN LAST LINE""
 
 
 IF any changes happened in the we will see in the runner.
