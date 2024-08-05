@@ -54,7 +54,8 @@ AWS_ECR_LOGIN_URi : WHICH WE COPID IN ECR upto name of ecr
 ECR_REPOSITORY_NAME: name of ecr we created    ""docker run -d -p 8080:8080 --ipc="host" --name=mltest -e 'AWS_ACCESS_KEY_ID=${iN LAST LINE""
 
 
-IF any changes happened in the we will see in the runner.
+If any changes happen in we will see in the runner.
+once updated go to the update and click on rerun all the jobs
 
 
 
