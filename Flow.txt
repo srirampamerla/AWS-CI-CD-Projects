@@ -1,0 +1,65 @@
+Docker Build checked
+Github Workflow
+Iam User In AWS
+
+Create the IAM Role with EC2 container registry full access and EC2 full access.
+Go to Security credentials -> Create the access key for CLI and download it.
+once done. Go to ECR -. Create repository and give name as student performance. It should be private. Complete creation 
+Go to EC2 . Give name and select application as Ubuntu and instance type as t2.medium and key pair as sample EC2 allow all http traffic and click on launch.
+once it is running . open it and cklick on connect.
+
+\To install the docker setup in ec2.
+sudo apt-get update -y it will install all he packages and align properly
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+sudo sh get-docker.sh
+
+
+sudo apt-get upgrade
+
+sudo usermod -aG docker ubuntu  - no need to use again sudo
+
+newgrp docker to create new grp
+
+docker  - we will see everything
+
+go to github -> settings. ACtions- Runner  will help when new commit happen automatically deployed in ec2.
+
+we need to create it.
+Download
+# Create a folder
+$ mkdir actions-runner && cd actions-runner# Download the latest runner package
+$ curl -o actions-runner-linux-x64-2.317.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.317.0/actions-runner-linux-x64-2.317.0.tar.gz# Optional: Validate the hash
+$ echo "9e883d210df8c6028aff475475a457d380353f9d01877d51cc01a17b2a91161d  actions-runner-linux-x64-2.317.0.tar.gz" | shasum -a 256 -c# Extract the installer
+$ tar xzf ./actions-runner-linux-x64-2.317.0.tar.gz
+
+Configure
+# Create the runner and start the configuration experience
+$ ./config.sh --url https://github.com/srirampamerla/ML_Project --token AM3W27HA6R4LOAISQKKJXVDGWCZ3A# Last step, run it!
+
+enter name of the runner: self-hosted
+enter additional labels we donot want just enter it.
+
+$ ./run.sh   -- it will connect with github and start listening for jobs.
+
+refresh and come back to same path -. u will see runner is created.
+
+settings-> Secrets and varibales.
+
+Actions-> click on create.
+AWS_ACCESS_KEY_ID  :OPEN THE iam access file add the value in this.
+AWS_SECRET_ACCESS_KEY:
+AWS_REGION : WHICH INSTANCE U ARE RUNING LIKE US-EAST-1
+AWS_ECR_LOGIN_URi : WHICH WE COPID IN ECR
+ECR_REPOSITORY_NAME: mLTEST WHICH IN YAML FILE    ""docker run -d -p 8080:8080 --ipc="host" --name=mltest -e 'AWS_ACCESS_KEY_ID=${iN LAST LINE""
+
+
+IF any changes happened in the we will see in the runner.
+
+
+
+
+
+
+
+
